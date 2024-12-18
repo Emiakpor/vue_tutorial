@@ -1,19 +1,30 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
+import FormBinding from './components/FormBinding.vue';
+
 import { ref, reactive } from 'vue';
 
 const message = ref('Hello World!');
 const titleClass = ref('title');
+
 const counter = reactive({
   count: 1,
 });
 
-counter.count++;
+
+function increment(){
+  counter.count++;
+}
+
 </script>
 
 <template>
   <h1 :class="titleClass">{{ message }}</h1>
   <p>{{ counter.count }}</p>
+
+  <button v-on:click="increment">Count is : {{ counter.count }}</button>
+  <br>
+  <FormBinding/>
 </template>
 
 <style scoped>
