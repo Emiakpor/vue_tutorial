@@ -1,30 +1,25 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
 import FormBinding from './components/FormBinding.vue';
+import EventListeners from './components/EventListeners.vue';
+import ConditionalRendering from './components/ConditionalRendering.vue';
+
 
 import { ref, reactive } from 'vue';
 
 const message = ref('Hello World!');
 const titleClass = ref('title');
 
-const counter = reactive({
-  count: 1,
-});
-
-
-function increment(){
-  counter.count++;
-}
-
 </script>
 
 <template>
   <h1 :class="titleClass">{{ message }}</h1>
-  <p>{{ counter.count }}</p>
 
-  <button v-on:click="increment">Count is : {{ counter.count }}</button>
+  <EventListeners />
   <br>
   <FormBinding/>
+
+  <ConditionalRendering/>
 </template>
 
 <style scoped>
