@@ -4,6 +4,7 @@ import FormBinding from './components/FormBinding.vue';
 import EventListeners from './components/EventListeners.vue';
 import ConditionalRendering from './components/ConditionalRendering.vue';
 import ListRendering from './components/ListRendering.vue';
+import ComputedProperty from './components/ComputedProperty.vue';
 
 
 import { ref, reactive } from 'vue';
@@ -20,9 +21,11 @@ const titleClass = ref('title');
     <EventListeners />
     <FormBinding/>
     <ConditionalRendering/>
+    <ListRendering/>
+
   -->
   
-  <ListRendering/>
+  <ComputedProperty/>
 </template>
 
 <style scoped>
