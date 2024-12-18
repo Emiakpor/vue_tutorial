@@ -3,6 +3,7 @@ import HelloWorld from './components/HelloWorld.vue';
 import FormBinding from './components/FormBinding.vue';
 import EventListeners from './components/EventListeners.vue';
 import ConditionalRendering from './components/ConditionalRendering.vue';
+import ListRendering from './components/ListRendering.vue';
 
 
 import { ref, reactive } from 'vue';
@@ -15,11 +16,13 @@ const titleClass = ref('title');
 <template>
   <h1 :class="titleClass">{{ message }}</h1>
 
-  <EventListeners />
-  <br>
-  <FormBinding/>
-
-  <ConditionalRendering/>
+  <!--
+    <EventListeners />
+    <FormBinding/>
+    <ConditionalRendering/>
+  -->
+  
+  <ListRendering/>
 </template>
 
 <style scoped>
