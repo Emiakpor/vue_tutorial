@@ -7,9 +7,10 @@ import ListRendering from './components/ListRendering.vue';
 import ComputedProperty from './components/ComputedProperty.vue';
 import LifecycleAndTemplateRefs from './components/LifecycleAndTemplateRefs.vue';
 import Watchers from './components/Watchers.vue';
+import Props from './components/Props.vue';
 
 
-import { ref, reactive } from 'vue';
+import { ref } from 'vue';
 
 const message = ref('Hello World!');
 const titleClass = ref('title');
@@ -26,10 +27,11 @@ const titleClass = ref('title');
     <ListRendering/>
     <ComputedProperty/>
     <LifecycleAndTemplateRefs/>
+    <Watchers/>
 
   -->
   
-  <Watchers/>
+  <Props :msg="'New count is '"/>
 </template>
 
 <style scoped>
