@@ -6,6 +6,7 @@ import ConditionalRendering from './components/ConditionalRendering.vue';
 import ListRendering from './components/ListRendering.vue';
 import ComputedProperty from './components/ComputedProperty.vue';
 import LifecycleAndTemplateRefs from './components/LifecycleAndTemplateRefs.vue';
+import Watchers from './components/Watchers.vue';
 
 
 import { ref, reactive } from 'vue';
@@ -24,11 +25,11 @@ const titleClass = ref('title');
     <ConditionalRendering/>
     <ListRendering/>
     <ComputedProperty/>
+    <LifecycleAndTemplateRefs/>
 
   -->
   
-  <LifecycleAndTemplateRefs/>
-  
+  <Watchers/>
 </template>
 
 <style scoped>
