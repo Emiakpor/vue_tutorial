@@ -9,6 +9,7 @@ import LifecycleAndTemplateRefs from './components/LifecycleAndTemplateRefs.vue'
 import Watchers from './components/Watchers.vue';
 import Props from './components/Props.vue';
 import Emits from './components/Emits.vue';
+import SlotsItem from './components/SlotsItem.vue';
 
 
 import { ref } from 'vue';
@@ -33,9 +34,11 @@ function greetings(msg: string){
     <LifecycleAndTemplateRefs/>
     <Watchers/>
     <Props :msg="'New count is '"/>
+    <Emits @response="greetings"/>
 
   -->
-  <Emits @response="greetings"/>
+  <SlotsItem>Slot item here</SlotsItem>
+  
 </template>
 
 <style scoped>
