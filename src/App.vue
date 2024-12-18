@@ -8,6 +8,7 @@ import ComputedProperty from './components/ComputedProperty.vue';
 import LifecycleAndTemplateRefs from './components/LifecycleAndTemplateRefs.vue';
 import Watchers from './components/Watchers.vue';
 import Props from './components/Props.vue';
+import Emits from './components/Emits.vue';
 
 
 import { ref } from 'vue';
@@ -15,7 +16,10 @@ import { ref } from 'vue';
 const message = ref('Hello World!');
 const titleClass = ref('title');
 
-</script>
+function greetings(msg: string){
+  message.value = msg;
+}
+ </script>
 
 <template>
   <h1 :class="titleClass">{{ message }}</h1>
@@ -28,10 +32,10 @@ const titleClass = ref('title');
     <ComputedProperty/>
     <LifecycleAndTemplateRefs/>
     <Watchers/>
+    <Props :msg="'New count is '"/>
 
   -->
-  
-  <Props :msg="'New count is '"/>
+  <Emits @response="greetings"/>
 </template>
 
 <style scoped>
